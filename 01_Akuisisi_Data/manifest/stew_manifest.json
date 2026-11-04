@@ -1,0 +1,47 @@
+{
+  "dataset_id": "STEW",
+  "title": "STEW: Simultaneous Task EEG Workload Dataset",
+  "authors": "Lim, W. L., Sourina, O., Wang, L. P.",
+  "publication_venue": "IEEE Trans. Neural Syst. Rehabil. Eng., 2018",
+  "doi": "10.21227/44r8-ya50",
+  "record_url": "https://ieee-dataport.org/open-access/stew-simultaneous-task-eeg-workload-dataset",
+  "license": "Open Access (IEEE DataPort) — login akun gratis IEEE diperlukan untuk unduh",
+  "format": "ZIP berisi file teks (.txt) per subjek per kondisi + ratings.csv",
+  "participants": 48,
+  "conditions": [
+    "resting (lo)",
+    "SIMKAP multitasking (hi)"
+  ],
+  "sampling_rate_hz": 128,
+  "channels": [
+    "AF3",
+    "F7",
+    "F3",
+    "FC5",
+    "T7",
+    "P7",
+    "O1",
+    "O2",
+    "P8",
+    "T8",
+    "FC6",
+    "F4",
+    "F8",
+    "AF4"
+  ],
+  "recording_minutes_per_case": 2.5,
+  "device": "Emotiv EPOC (14 channels, 128 Hz)",
+  "workload_rating_scale": "1-9 (NASA-style subjective rating)",
+  "total_size_bytes_approx": 54820864,
+  "citation_bibtex": "@dataset{lim2018stew,\n  title  = {{STEW}: Simultaneous Task {EEG} Workload Dataset},\n  author = {Lim, W. L. and Sourina, O. and Wang, L. P.},\n  year   = {2018},\n  doi    = {10.21227/44r8-ya50},\n  url    = {https://ieee-dataport.org/open-access/stew-simultaneous-task-eeg-workload-dataset}\n}",
+  "files": [
+    {
+      "name": "STEW Dataset.zip",
+      "size_bytes_approx": 54820864,
+      "md5": "987330cd36004f1669a2e4dba4f865ba",
+      "size_bytes_actual": 54811358
+    }
+  ],
+  "filename_convention": "subNN_lo.txt (resting) / subNN_hi.txt (SIMKAP)",
+  "ratings_file": "ratings.csv (subject, lo_rating, hi_rating)"
+}

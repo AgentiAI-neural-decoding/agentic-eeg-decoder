@@ -1,0 +1,29 @@
+# Dependensi pipeline Agentic EEG Decoder (Tahap 01-06).
+# Diuji pada Python 3.12. Di Google Colab, `torch` SUDAH terpasang dengan CUDA —
+# JANGAN reinstall torch di Colab (biarkan versi CUDA bawaan). Lihat README_COLAB.md.
+
+# Sinyal & preprocessing
+mne>=1.7
+mne-bids>=0.15
+mne-icalabel>=0.9
+
+# Ilmiah
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1,<3   # <3: pandas 3.0 belum kompat penuh dgn mne/colab
+scikit-learn>=1.4
+matplotlib>=3.8
+
+# Riemannian / geometric
+pyriemann>=0.6
+
+# Deep learning (torch: di Colab gunakan bawaan CUDA; lokal: pip akan memasang CPU/MPS build)
+torch>=2.2
+
+# ICLabel backend
+onnxruntime>=1.17
+
+# Foundation model (Tahap 06)
+huggingface_hub>=0.20
+einops>=0.7
+# braindecode  # aktifkan utk CBraMod (encoder=cbramod) — lihat 06_FoundationModel/README.md §3

@@ -1,0 +1,57 @@
+{
+  "description": "Konfigurasi ekstraksi fitur Tahap 03 — transfer-compatible cross-dataset (COG-BCI <-> STEW) untuk decoding beban kognitif.",
+  "common_channels": ["AF3", "F7", "F3", "FC5", "T7", "P7", "O1", "O2", "P8", "T8", "FC6", "F4", "F8", "AF4"],
+  "target_sfreq_hz": 128,
+  "bands": {
+    "delta": [1.0, 4.0],
+    "theta": [4.0, 8.0],
+    "alpha": [8.0, 13.0],
+    "beta": [13.0, 30.0],
+    "gamma": [30.0, 45.0]
+  },
+  "psd": {
+    "method": "welch",
+    "n_fft_s": 2.0,
+    "relative_power": true,
+    "log_transform": true
+  },
+  "covariance": {
+    "estimator": "oas",
+    "save_tangent_global": true
+  },
+  "inputs": {
+    "COG-BCI": "../02_Preprocessing/derivatives/COG-BCI",
+    "STEW": "../02_Preprocessing/derivatives/STEW"
+  },
+  "output_root": "features",
+  "label_schemes": {
+    "workload_binary": {
+      "datasets": ["COG-BCI", "STEW"],
+      "comment": "Target PRIMER transfer-learning: beban kognitif rendah(0) vs tinggi(1), selaras antar-dataset.",
+      "COG-BCI": {
+        "low": ["RS_Beg_EC", "RS_Beg_EO", "RS_End_Ec", "RS_End_EO", "MATBeasy", "zeroBACK"],
+        "high": ["MATBmed", "MATBdiff", "oneBACK", "twoBACK", "PVT", "Flanker"]
+      },
+      "STEW": {"lo": 0, "hi": 1}
+    },
+    "workload_extreme": {
+      "datasets": ["COG-BCI", "STEW"],
+      "comment": "Harmonisasi konstruk: kontras EKSTREM agar sebanding dgn STEW (rest vs SIMKAP-multitasking). COG-BCI low=resting saja, high=MATBdiff+twoBACK (paling menuntut; MATB~SIMKAP). Kondisi ambigu dibuang.",
+      "COG-BCI": {
+        "low": ["RS_Beg_EC", "RS_Beg_EO", "RS_End_Ec", "RS_End_EO"],
+        "high": ["MATBdiff", "twoBACK"]
+      },
+      "STEW": {"lo": 0, "hi": 1}
+    },
+    "nback_graded": {
+      "datasets": ["COG-BCI"],
+      "comment": "Target sekunder within-dataset: beban memori kerja bertingkat.",
+      "COG-BCI": {"zeroBACK": 0, "oneBACK": 1, "twoBACK": 2}
+    },
+    "matb_graded": {
+      "datasets": ["COG-BCI"],
+      "comment": "Target sekunder within-dataset: beban MATB bertingkat.",
+      "COG-BCI": {"MATBeasy": 0, "MATBmed": 1, "MATBdiff": 2}
+    }
+  }
+}

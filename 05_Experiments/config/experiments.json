@@ -1,0 +1,11 @@
+{
+  "description": "Konfigurasi eksperimen Tahap 05 — domain adaptation transfer + ablation.",
+  "features_root": "../03_Features/features",
+  "output_root": "results",
+  "cv": {
+    "n_splits": 5,
+    "subsample_per_run": 8000,
+    "random_state": 42
+  },
+  "class_weight": "balanced"
+}

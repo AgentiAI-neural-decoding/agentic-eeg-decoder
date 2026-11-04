@@ -1,0 +1,80 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+type: software
+title: "Agentic EEG Decoder — Neural Decoding Berbasis Agentic AI"
+abstract: >
+  Pipeline reproducible untuk neural decoding berbasis arsitektur Agentic AI,
+  dikembangkan dalam program Penelitian Fundamental DIKTI 2026.
+  Mencakup akuisisi & preprocessing dataset EEG kognitif publik (COG-BCI, STEW),
+  serta orchestrator multi-agent untuk klasifikasi beban kognitif kolaborasi
+  tim lintas disiplin.
+authors:
+  - family-names: Mubaroq
+    given-names: Sugeng Rifqi
+    affiliation: Akademi Digital Bandung
+    email: mubaroq@digitalbdg.ac.id
+    orcid: "https://orcid.org/0000-0001-8933-5867"
+repository-code: "https://github.com/AgentiAI-neural-decoding/agentic-eeg-decoder"
+license: MIT
+keywords:
+  - electroencephalography
+  - neural-decoding
+  - agentic-ai
+  - cognitive-workload
+  - brain-computer-interface
+  - passive-bci
+  - mne-python
+date-released: 2026-11-04
+version: 1.0.0
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Mubaroq
+      given-names: Sugeng Rifqi
+      orcid: "https://orcid.org/0000-0001-8933-5867"
+    - family-names: Awangga
+      given-names: Rolly Maulana
+      orcid: "https://orcid.org/0000-0001-5530-9505"
+    - family-names: Pragama
+      given-names: Tegar Ditya
+      orcid: "https://orcid.org/0009-0009-6236-353X"
+    - family-names: Fathummubin
+      given-names: Sidiq
+    - family-names: Abdulhaq
+      given-names: Ali Yusuf
+  title: "A Multi-Specialist Stacking Decoder of Cognitive Workload and a Decomposition of the Limits of Cross-Dataset Transfer in Electroencephalography"
+  journal: "Intelligent Automation & Soft Computing"
+  year: 2026
+  volume: 41
+  issue: 1
+  start: 27
+  end: 46
+  doi: "10.32604/iasc.2026.088039"
+references:
+  - type: article
+    authors:
+      - family-names: Hinss
+        given-names: Marcel F.
+      - family-names: Somon
+        given-names: Bertille
+      - family-names: Jahanpour
+        given-names: Emilie S.
+      - family-names: Lotte
+        given-names: Fabien
+      - family-names: Roy
+        given-names: Raphaël N.
+    title: "Open multi-session and multi-task EEG cognitive Dataset for passive brain-computer Interface Applications"
+    year: 2023
+    journal: "Scientific Data"
+    doi: "10.1038/s41597-022-01898-y"
+  - type: data
+    authors:
+      - family-names: Lim
+        given-names: W. L.
+      - family-names: Sourina
+        given-names: O.
+      - family-names: Wang
+        given-names: L. P.
+    title: "STEW: Simultaneous Task EEG Workload Dataset"
+    year: 2018
+    doi: "10.21227/44r8-ya50"

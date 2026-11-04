@@ -1,0 +1,78 @@
+{
+  "COG-BCI_matb_graded": {
+    "n_subjects": 29,
+    "n_splits": 5,
+    "variants": {
+      "only_spectral": {
+        "acc": 0.548,
+        "f1": 0.546
+      },
+      "only_riemann": {
+        "acc": 0.594,
+        "f1": 0.594
+      },
+      "only_csp": {
+        "acc": 0.522,
+        "f1": 0.517
+      },
+      "minus_spectral": {
+        "acc": 0.59,
+        "f1": 0.59
+      },
+      "minus_riemann": {
+        "acc": 0.577,
+        "f1": 0.575
+      },
+      "minus_csp": {
+        "acc": 0.611,
+        "f1": 0.61
+      },
+      "full_softvote": {
+        "acc": 0.62,
+        "f1": 0.62
+      },
+      "full_stacking": {
+        "acc": 0.612,
+        "f1": 0.612
+      }
+    }
+  },
+  "STEW_workload_binary": {
+    "n_subjects": 47,
+    "n_splits": 5,
+    "variants": {
+      "only_spectral": {
+        "acc": 0.744,
+        "f1": 0.741
+      },
+      "only_riemann": {
+        "acc": 0.682,
+        "f1": 0.677
+      },
+      "only_csp": {
+        "acc": 0.74,
+        "f1": 0.736
+      },
+      "minus_spectral": {
+        "acc": 0.74,
+        "f1": 0.736
+      },
+      "minus_riemann": {
+        "acc": 0.779,
+        "f1": 0.775
+      },
+      "minus_csp": {
+        "acc": 0.763,
+        "f1": 0.759
+      },
+      "full_softvote": {
+        "acc": 0.777,
+        "f1": 0.772
+      },
+      "full_stacking": {
+        "acc": 0.781,
+        "f1": 0.777
+      }
+    }
+  }
+}

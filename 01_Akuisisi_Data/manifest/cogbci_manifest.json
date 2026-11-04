@@ -1,0 +1,191 @@
+{
+  "dataset_id": "COG-BCI",
+  "title": "COG-BCI database: A multi-session and multi-task EEG cognitive dataset for passive brain-computer interfaces",
+  "authors": "Hinss, M. F., Somon, B., Jahanpour, E. S., Lotte, F., Roy, R. N.",
+  "publication_venue": "Scientific Data (Nature), 2023",
+  "doi": "10.5281/zenodo.6874128",
+  "record_url": "https://zenodo.org/records/6874129",
+  "api_url": "https://zenodo.org/api/records/6874129",
+  "license": "CC-BY-4.0",
+  "format": "BIDS (.set + .fdt)",
+  "participants": 29,
+  "sessions_per_participant": 3,
+  "tasks": [
+    "MATB",
+    "N-Back",
+    "PVT",
+    "Flanker"
+  ],
+  "resting_state_segments": [
+    "RS_Beg_EC",
+    "RS_Beg_EO",
+    "RS_End_EC",
+    "RS_End_EO"
+  ],
+  "total_recording_hours": 100,
+  "total_size_bytes_approx": 31500000000,
+  "ethical_approval": "Université de Toulouse (CER 2021-342)",
+  "citation_bibtex": "@article{hinss2023cogbci,\n  title   = {Open multi-session and multi-task {EEG} cognitive Dataset for passive brain-computer Interface Applications},\n  author  = {Hinss, Marcel F. and Somon, Bertille and Jahanpour, Emilie S. and Lotte, Fabien and Roy, Raphaël N.},\n  journal = {Scientific Data},\n  year    = {2023},\n  doi     = {10.1038/s41597-022-01898-y}\n}",
+  "files": [
+    {
+      "name": "sub-01.zip",
+      "size_bytes": 1096630047,
+      "md5": "becd2fb862fff84973a1d136fcb03262"
+    },
+    {
+      "name": "sub-02.zip",
+      "size_bytes": 1077564602,
+      "md5": "55aa94b478d2227dd1edd924929b60b6"
+    },
+    {
+      "name": "sub-03.zip",
+      "size_bytes": 1091919452,
+      "md5": "0b08b56167be7962e76d8fb0d7653d5a"
+    },
+    {
+      "name": "sub-04.zip",
+      "size_bytes": 1061048862,
+      "md5": "d915c55728bc9bf53dcee1fe36c858fd"
+    },
+    {
+      "name": "sub-05.zip",
+      "size_bytes": 1028767317,
+      "md5": "0559cbad525fc9be0722a7cce3e40b22"
+    },
+    {
+      "name": "sub-06.zip",
+      "size_bytes": 1047171814,
+      "md5": "38f78d1ec6b4cf05d2de169381ce7cde"
+    },
+    {
+      "name": "sub-07.zip",
+      "size_bytes": 1038698056,
+      "md5": "8ce933dc96be4d6ebb0802e403ea8d3f"
+    },
+    {
+      "name": "sub-08.zip",
+      "size_bytes": 1075164383,
+      "md5": "ebe7f2539e397eb61a8ccc53ff289bf6"
+    },
+    {
+      "name": "sub-09.zip",
+      "size_bytes": 1068933608,
+      "md5": "307ea98941c7d74aaefdbe3b35c734ac"
+    },
+    {
+      "name": "sub-10.zip",
+      "size_bytes": 1077685815,
+      "md5": "2cc76e124dda3e44c59027beb2c3ec9b"
+    },
+    {
+      "name": "sub-11.zip",
+      "size_bytes": 1126842062,
+      "md5": "ffd1a0d489b972789d30b4ec3bf19ae5"
+    },
+    {
+      "name": "sub-12.zip",
+      "size_bytes": 1121359929,
+      "md5": "3b6e43f236f42ea6c2c0e2f508368e87"
+    },
+    {
+      "name": "sub-13.zip",
+      "size_bytes": 1083675829,
+      "md5": "d817b3dbcad87635129388ed0ecfc125"
+    },
+    {
+      "name": "sub-14.zip",
+      "size_bytes": 1092418515,
+      "md5": "9a45f03db5d7e9f307936eea426b0fa5"
+    },
+    {
+      "name": "sub-15.zip",
+      "size_bytes": 1109992904,
+      "md5": "3cdce5d31697db36e9053cbed02e48e1"
+    },
+    {
+      "name": "sub-16.zip",
+      "size_bytes": 1090031396,
+      "md5": "b2850e6e3f939ee0af5e536a9bda9311"
+    },
+    {
+      "name": "sub-17.zip",
+      "size_bytes": 1090377075,
+      "md5": "22717dfcdb9572e2d7f37667bd243961"
+    },
+    {
+      "name": "sub-18.zip",
+      "size_bytes": 1090539086,
+      "md5": "7ee34bd3b1de28642d3ebbf364079ed1"
+    },
+    {
+      "name": "sub-19.zip",
+      "size_bytes": 1090539394,
+      "md5": "9859a8110cffbffa7f396ca4197af668"
+    },
+    {
+      "name": "sub-20.zip",
+      "size_bytes": 1090540654,
+      "md5": "e8342960b91b7064a52b92ea8c2a3140"
+    },
+    {
+      "name": "sub-21.zip",
+      "size_bytes": 1090539205,
+      "md5": "8aa793eb5bd3a1f3b31b9310f8e1ed72"
+    },
+    {
+      "name": "sub-22.zip",
+      "size_bytes": 1090539181,
+      "md5": "da0b4a52b0bd9859757e40318a421c8a"
+    },
+    {
+      "name": "sub-23.zip",
+      "size_bytes": 1090540241,
+      "md5": "3531ca73cb372e2fd5f7e4972d5a7e53"
+    },
+    {
+      "name": "sub-24.zip",
+      "size_bytes": 1090539537,
+      "md5": "b76fc1c461cf266c2a1cba235b0f3f4f"
+    },
+    {
+      "name": "sub-25.zip",
+      "size_bytes": 1089660609,
+      "md5": "53b303d69e61dc1af5a4fa08a47b72f0"
+    },
+    {
+      "name": "sub-26.zip",
+      "size_bytes": 1120856534,
+      "md5": "622732a017492dd1b4fcc1ac86dc3f27"
+    },
+    {
+      "name": "sub-27.zip",
+      "size_bytes": 1090534848,
+      "md5": "872a06d4c66e531d14eb66d780ec62cc"
+    },
+    {
+      "name": "sub-28.zip",
+      "size_bytes": 1111635145,
+      "md5": "91ae88774cbd3273f3936b428e913364"
+    },
+    {
+      "name": "sub-29.zip",
+      "size_bytes": 1091372297,
+      "md5": "c67bd59a470c387a667492814244b18a"
+    },
+    {
+      "name": "COG-BCI_info.pdf",
+      "size_bytes": 229267,
+      "md5": "7521887b3952a39834f53d68308cb07f"
+    },
+    {
+      "name": "notebook.mat",
+      "size_bytes": 4616,
+      "md5": "0ca5e0689aa8040eeecd5df1c79a06ec"
+    },
+    {
+      "name": "triggerlist.txt",
+      "size_bytes": 1922,
+      "md5": "6c3b173794158d0a3298ad602e162b7a"
+    }
+  ]
+}

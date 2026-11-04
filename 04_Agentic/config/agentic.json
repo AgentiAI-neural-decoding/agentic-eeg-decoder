@@ -1,0 +1,23 @@
+{
+  "description": "Konfigurasi arsitektur Agentic AI — decoder multi-spesialis + orkestrator untuk beban kognitif (Tahap 04).",
+  "features_root": "../03_Features/features",
+  "output_root": "results",
+  "specialists": {
+    "spectral": {"enabled": true, "view": "psd", "classifier": "svm_rbf"},
+    "riemann": {"enabled": true, "view": "cov", "classifier": "logreg"},
+    "csp": {"enabled": true, "view": "cov", "classifier": "lda", "n_filters": 6}
+  },
+  "orchestrator": {
+    "type": "stacking",
+    "meta_classifier": "logreg",
+    "internal_cv_folds": 3,
+    "use_proba": true
+  },
+  "cv": {
+    "scheme": "group_kfold",
+    "n_splits": 5,
+    "subsample_per_run": 12000,
+    "random_state": 42
+  },
+  "class_weight": "balanced"
+}

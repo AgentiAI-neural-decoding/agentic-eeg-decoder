@@ -1,0 +1,20 @@
+{
+  "STEW_workload_binary": {
+    "n_folds": 8,
+    "orchestrator_mean": 0.782,
+    "best_specialist": "csp",
+    "best_specialist_mean": 0.737,
+    "mean_diff": 0.045,
+    "paired_t_p": 0.0096,
+    "wilcoxon_p": 0.0156
+  },
+  "COG-BCI_matb_graded": {
+    "n_folds": 8,
+    "orchestrator_mean": 0.611,
+    "best_specialist": "riemann",
+    "best_specialist_mean": 0.583,
+    "mean_diff": 0.028,
+    "paired_t_p": 0.0384,
+    "wilcoxon_p": 0.0547
+  }
+}

@@ -1,0 +1,112 @@
+# ============================================================
+# Dataset mentah & turunan — tidak pernah masuk repo
+# ============================================================
+01_Akuisisi_Data/raw/
+02_Preprocessing/derivatives/
+02_Preprocessing/reports/
+**/.cache/
+
+# Tensor fitur & artefak besar — regenerable, dikirim via Drive untuk Colab (bukan git)
+03_Features/features/
+*.npz
+*.fif
+*.pt
+*.ckpt
+
+# ============================================================
+# Substansi proposal & anggaran — di luar scope repo kode
+# ============================================================
+*.docx
+*.xlsx
+*.csv
+RAB_*
+Resume_*
+Surat_*
+Template_*
+document_common_*
+penelitian__document_*
+signed_*
+comment*reviewer*
+daftar_pustaka_*.ris
+*.drawio
+*.drawio.pdf
+
+# Catatan: PDF proposal sengaja dibiarkan (untuk dokumentasi metode)
+# Bila tidak diinginkan, tambahkan `*.pdf` di sini.
+
+# ============================================================
+# Korpus literatur & artefak berat naskah — arsip lokal, bukan repo
+# (PDF terbitan penerbit, ekspor basis data, objek R regenerable)
+# ============================================================
+**/fulltext_pdfs/
+**/fulltext_text/
+manuscripts/Neural-decoding-review/03_Raw_Data/
+manuscripts/*/03_pdfs/
+*.rds
+*.zip
+node_modules/
+
+# Bundel HTML widget bibliometrix (regenerable dari 04_Scripts/*.R)
+**/07_Figures/*_files/
+**/07_Figures/*ThreeFields*.html
+**/07_Figures/Figure1_PRISMA_Flow.html
+
+# Naskah adalah luaran penelitian, bukan substansi proposal —
+# kecualikan dari larangan *.docx/*.xlsx di atas
+!manuscripts/**/*.docx
+!manuscripts/**/*.xlsx
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# ============================================================
+# Jupyter
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_meta
+
+# ============================================================
+# OS / IDE
+# ============================================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ============================================================
+# Output sementara
+# ============================================================
+*.log
+*.tmp
+*.bak
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.spl

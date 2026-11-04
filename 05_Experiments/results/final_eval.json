@@ -1,0 +1,106 @@
+{
+  "_meta": {
+    "n_splits": 8,
+    "cap": 5000,
+    "seed": 42,
+    "significance": "Nadeau-Bengio corrected resampled t-test + Wilcoxon; no multiple-comparison correction"
+  },
+  "COG-BCI_nback_graded": {
+    "n_subjects": 29,
+    "n_folds": 8,
+    "means": {
+      "spec:spectral": 0.498,
+      "spec:riemann": 0.506,
+      "spec:csp": 0.44,
+      "full_stacking": 0.527
+    },
+    "stds": {
+      "spec:spectral": 0.109,
+      "spec:riemann": 0.129,
+      "spec:csp": 0.082,
+      "full_stacking": 0.135
+    }
+  },
+  "COG-BCI_matb_graded": {
+    "n_subjects": 29,
+    "n_folds": 8,
+    "means": {
+      "spec:spectral": 0.551,
+      "spec:riemann": 0.583,
+      "spec:csp": 0.518,
+      "full_stacking": 0.611,
+      "full_softvote": 0.612,
+      "minus_spectral": 0.576,
+      "minus_riemann": 0.569,
+      "minus_csp": 0.603
+    },
+    "stds": {
+      "spec:spectral": 0.07,
+      "spec:riemann": 0.092,
+      "spec:csp": 0.036,
+      "full_stacking": 0.083,
+      "full_softvote": 0.076,
+      "minus_spectral": 0.094,
+      "minus_riemann": 0.062,
+      "minus_csp": 0.082
+    },
+    "sig_orch_vs_best": {
+      "best_specialist": "riemann",
+      "orchestrator_mean": 0.611,
+      "best_specialist_mean": 0.583,
+      "mean_diff": 0.028,
+      "paired_t_p_uncorrected": 0.0384,
+      "nadeau_bengio_p": 0.1256,
+      "wilcoxon_p": 0.0547
+    }
+  },
+  "COG-BCI_workload_binary": {
+    "n_subjects": 29,
+    "n_folds": 8,
+    "means": {
+      "spec:spectral": 0.564,
+      "spec:riemann": 0.577,
+      "spec:csp": 0.439,
+      "full_stacking": 0.608
+    },
+    "stds": {
+      "spec:spectral": 0.05,
+      "spec:riemann": 0.089,
+      "spec:csp": 0.021,
+      "full_stacking": 0.094
+    }
+  },
+  "STEW_workload_binary": {
+    "n_subjects": 47,
+    "n_folds": 8,
+    "means": {
+      "spec:spectral": 0.731,
+      "spec:riemann": 0.675,
+      "spec:csp": 0.737,
+      "full_stacking": 0.782,
+      "full_softvote": 0.771,
+      "minus_spectral": 0.741,
+      "minus_riemann": 0.767,
+      "minus_csp": 0.757
+    },
+    "stds": {
+      "spec:spectral": 0.051,
+      "spec:riemann": 0.082,
+      "spec:csp": 0.064,
+      "full_stacking": 0.058,
+      "full_softvote": 0.067,
+      "minus_spectral": 0.069,
+      "minus_riemann": 0.058,
+      "minus_csp": 0.055
+    },
+    "sig_orch_vs_best": {
+      "best_specialist": "csp",
+      "orchestrator_mean": 0.782,
+      "best_specialist_mean": 0.737,
+      "mean_diff": 0.045,
+      "paired_t_p_uncorrected": 0.0096,
+      "nadeau_bengio_p": 0.0466,
+      "wilcoxon_p": 0.0156
+    }
+  }
+}

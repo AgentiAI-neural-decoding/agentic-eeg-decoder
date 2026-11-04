@@ -1,0 +1,42 @@
+[
+  {
+    "target": "STEW",
+    "source": "COG-BCI",
+    "n_splits": 5,
+    "aux_weight": 0.3,
+    "single": {
+      "acc": 0.727,
+      "f1": 0.722
+    },
+    "multi": {
+      "acc": 0.697,
+      "f1": 0.687
+    },
+    "multi_w": {
+      "acc": 0.702,
+      "f1": 0.694
+    },
+    "gain_f1_multi": -0.035,
+    "gain_f1_multi_w": -0.028
+  },
+  {
+    "target": "COG-BCI",
+    "source": "STEW",
+    "n_splits": 5,
+    "aux_weight": 0.3,
+    "single": {
+      "acc": 0.649,
+      "f1": 0.596
+    },
+    "multi": {
+      "acc": 0.661,
+      "f1": 0.588
+    },
+    "multi_w": {
+      "acc": 0.65,
+      "f1": 0.584
+    },
+    "gain_f1_multi": -0.008,
+    "gain_f1_multi_w": -0.012
+  }
+]

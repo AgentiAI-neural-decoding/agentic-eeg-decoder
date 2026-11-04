@@ -1,0 +1,118 @@
+{
+  "COG-BCI_nback_graded": {
+    "n_epochs": 12000,
+    "n_subjects": 29,
+    "n_classes": 3,
+    "chance": 0.337,
+    "n_splits": 5,
+    "scores": {
+      "specialist:spectral": {
+        "acc_mean": 0.514,
+        "acc_std": 0.047,
+        "f1_mean": 0.512
+      },
+      "specialist:riemann": {
+        "acc_mean": 0.515,
+        "acc_std": 0.07,
+        "f1_mean": 0.511
+      },
+      "specialist:csp": {
+        "acc_mean": 0.456,
+        "acc_std": 0.053,
+        "f1_mean": 0.452
+      },
+      "orchestrator": {
+        "acc_mean": 0.533,
+        "acc_std": 0.062,
+        "f1_mean": 0.53
+      }
+    }
+  },
+  "COG-BCI_matb_graded": {
+    "n_epochs": 12000,
+    "n_subjects": 29,
+    "n_classes": 3,
+    "chance": 0.338,
+    "n_splits": 5,
+    "scores": {
+      "specialist:spectral": {
+        "acc_mean": 0.57,
+        "acc_std": 0.065,
+        "f1_mean": 0.568
+      },
+      "specialist:riemann": {
+        "acc_mean": 0.582,
+        "acc_std": 0.063,
+        "f1_mean": 0.579
+      },
+      "specialist:csp": {
+        "acc_mean": 0.521,
+        "acc_std": 0.019,
+        "f1_mean": 0.508
+      },
+      "orchestrator": {
+        "acc_mean": 0.611,
+        "acc_std": 0.046,
+        "f1_mean": 0.607
+      }
+    }
+  },
+  "COG-BCI_workload_binary": {
+    "n_epochs": 12000,
+    "n_subjects": 29,
+    "n_classes": 2,
+    "chance": 0.742,
+    "n_splits": 5,
+    "scores": {
+      "specialist:spectral": {
+        "acc_mean": 0.741,
+        "acc_std": 0.025,
+        "f1_mean": 0.586
+      },
+      "specialist:riemann": {
+        "acc_mean": 0.61,
+        "acc_std": 0.039,
+        "f1_mean": 0.579
+      },
+      "specialist:csp": {
+        "acc_mean": 0.743,
+        "acc_std": 0.015,
+        "f1_mean": 0.464
+      },
+      "orchestrator": {
+        "acc_mean": 0.652,
+        "acc_std": 0.043,
+        "f1_mean": 0.612
+      }
+    }
+  },
+  "STEW_workload_binary": {
+    "n_epochs": 9491,
+    "n_subjects": 47,
+    "n_classes": 2,
+    "chance": 0.55,
+    "n_splits": 5,
+    "scores": {
+      "specialist:spectral": {
+        "acc_mean": 0.742,
+        "acc_std": 0.025,
+        "f1_mean": 0.736
+      },
+      "specialist:riemann": {
+        "acc_mean": 0.67,
+        "acc_std": 0.038,
+        "f1_mean": 0.66
+      },
+      "specialist:csp": {
+        "acc_mean": 0.741,
+        "acc_std": 0.027,
+        "f1_mean": 0.735
+      },
+      "orchestrator": {
+        "acc_mean": 0.77,
+        "acc_std": 0.028,
+        "f1_mean": 0.766
+      }
+    }
+  }
+}

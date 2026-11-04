@@ -1,0 +1,17 @@
+{
+  "description": "Tahap 07 — harmonisasi domain-adversarial (DANN). Encoder CNN/Mamba + GRL.",
+  "derivatives": {
+    "COG-BCI": "../02_Preprocessing/derivatives/COG-BCI",
+    "STEW": "../02_Preprocessing/derivatives/STEW"
+  },
+  "common_channels": ["AF3", "F7", "F3", "FC5", "T7", "P7", "O1", "O2", "P8", "T8", "FC6", "F4", "F8", "AF4"],
+  "sfreq": 128,
+  "label_scheme": "extreme",
+  "epochs": 25,
+  "batch_size": 128,
+  "lambda_max": 1.0,
+  "dann_lambdas": [0.1, 0.3, 1.0],
+  "device": "auto",
+  "output_root": "results",
+  "cv": {"n_splits": 5, "max_epochs": 3000, "random_state": 42}
+}

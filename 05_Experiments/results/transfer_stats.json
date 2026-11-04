@@ -1,0 +1,74 @@
+{
+  "STEW_workload_binary": {
+    "n_folds": 8,
+    "single": 0.745,
+    "multi": 0.705,
+    "ccda": 0.723,
+    "gain_vs0": {
+      "mean_diff": -0.039,
+      "paired_t_p": 0.0077,
+      "nadeau_bengio_p": 0.0394,
+      "wilcoxon_p": 0.0078
+    },
+    "ccda_vs_naive": {
+      "mean_diff": 0.018,
+      "paired_t_p": 0.1003,
+      "nadeau_bengio_p": 0.2371,
+      "wilcoxon_p": 0.1094
+    }
+  },
+  "STEW_workload_extreme": {
+    "n_folds": 8,
+    "single": 0.745,
+    "multi": 0.719,
+    "ccda": 0.723,
+    "gain_vs0": {
+      "mean_diff": -0.025,
+      "paired_t_p": 0.0116,
+      "nadeau_bengio_p": 0.0536,
+      "wilcoxon_p": 0.0234
+    },
+    "ccda_vs_naive": {
+      "mean_diff": 0.004,
+      "paired_t_p": 0.7298,
+      "nadeau_bengio_p": 0.813,
+      "wilcoxon_p": 0.7422
+    }
+  },
+  "COG-BCI_workload_binary": {
+    "n_folds": 8,
+    "single": 0.55,
+    "multi": 0.54,
+    "ccda": 0.542,
+    "gain_vs0": {
+      "mean_diff": -0.01,
+      "paired_t_p": 0.1846,
+      "nadeau_bengio_p": 0.3482,
+      "wilcoxon_p": 0.25
+    },
+    "ccda_vs_naive": {
+      "mean_diff": 0.002,
+      "paired_t_p": 0.7898,
+      "nadeau_bengio_p": 0.8553,
+      "wilcoxon_p": 0.7422
+    }
+  },
+  "COG-BCI_workload_extreme": {
+    "n_folds": 8,
+    "single": 0.775,
+    "multi": 0.725,
+    "ccda": 0.782,
+    "gain_vs0": {
+      "mean_diff": -0.05,
+      "paired_t_p": 0.0009,
+      "nadeau_bengio_p": 0.0073,
+      "wilcoxon_p": 0.0078
+    },
+    "ccda_vs_naive": {
+      "mean_diff": 0.056,
+      "paired_t_p": 0.0002,
+      "nadeau_bengio_p": 0.0017,
+      "wilcoxon_p": 0.0078
+    }
+  }
+}

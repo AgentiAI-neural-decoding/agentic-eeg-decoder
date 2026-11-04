@@ -1,0 +1,24 @@
+[
+  {
+    "target": "STEW",
+    "source": "COG-BCI",
+    "n_splits": 5,
+    "single_acc": 0.77,
+    "multi_acc": 0.715,
+    "single_f1": 0.766,
+    "multi_f1": 0.69,
+    "abs_gain_acc": -0.055,
+    "rel_gain_acc_pct": -7.2
+  },
+  {
+    "target": "COG-BCI",
+    "source": "STEW",
+    "n_splits": 5,
+    "single_acc": 0.652,
+    "multi_acc": 0.711,
+    "single_f1": 0.612,
+    "multi_f1": 0.582,
+    "abs_gain_acc": 0.059,
+    "rel_gain_acc_pct": 9.0
+  }
+]

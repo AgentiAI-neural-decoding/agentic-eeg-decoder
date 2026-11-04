@@ -1,0 +1,43 @@
+{
+  "dataset_id": "STEW",
+  "raw_root": "../01_Akuisisi_Data/raw/STEW",
+  "output_root": "derivatives/STEW",
+  "channels": ["AF3", "F7", "F3", "FC5", "T7", "P7", "O1", "O2", "P8", "T8", "FC6", "F4", "F8", "AF4"],
+  "sfreq_hz": 128,
+  "montage": "standard_1020",
+  "line_freq_hz": 50,
+  "notch_freqs_hz": [50],
+  "bandpass_hz": [0.5, 45.0],
+  "ica_highpass_hz": 1.0,
+  "resample_hz": null,
+  "reference": "average",
+  "bad_channel_detection": {
+    "enabled": true,
+    "robust_z_threshold": 3.5,
+    "flat_threshold_uv": 1.0,
+    "max_bad_fraction": 0.30
+  },
+  "ica": {
+    "n_components": 13,
+    "method": "infomax",
+    "fit_params": {"extended": true},
+    "random_state": 42,
+    "max_iter": 1000
+  },
+  "artifact_heuristic": {
+    "frontal_channels_for_eog": ["AF3", "AF4", "F7", "F8"],
+    "eog_corr_threshold": 0.6
+  },
+  "epoching": {
+    "epoch_length_s": 2.0,
+    "overlap_s": 1.0,
+    "reject_uv": {"eeg": 200e-6},
+    "min_epoch_retention": 0.3
+  },
+  "label_mapping": {
+    "lo": 0,
+    "hi": 1
+  },
+  "save_format": ["fif"],
+  "qc_plots": true
+}
