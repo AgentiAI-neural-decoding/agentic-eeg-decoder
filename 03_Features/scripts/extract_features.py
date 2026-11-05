@@ -49,7 +49,7 @@ def parse_meta(path: Path, dataset: str) -> dict:
     name = path.stem
     sub = re.search(r"sub-(\w+?)_", name)
     sub = sub.group(1) if sub else "??"
-    if dataset == "COG-BCI":
+    if dataset in ("COG-BCI", "ds003838"):
         ses = re.search(r"ses-(\w+?)_", name)
         task = re.search(r"task-(.+?)_run", name)
         return {"subject": sub, "session": ses.group(1) if ses else "-",

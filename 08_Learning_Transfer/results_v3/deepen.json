@@ -1,0 +1,70 @@
+{
+  "reliability_baseline": {
+    "n-back": {
+      "n_subjects": 20,
+      "per_subject_rho_median": 0.111,
+      "per_subject_rho_iqr": [
+        -0.02,
+        0.22
+      ],
+      "pct_subjects_positive": 65.0,
+      "pct_subjects_monotonic": 30.0,
+      "decoder_index_rho_pooled": 0.086,
+      "alpha_only_rho_pooled": 0.086
+    },
+    "MATB": {
+      "n_subjects": 20,
+      "per_subject_rho_median": 0.524,
+      "per_subject_rho_iqr": [
+        0.309,
+        0.591
+      ],
+      "pct_subjects_positive": 100.0,
+      "pct_subjects_monotonic": 60.0,
+      "decoder_index_rho_pooled": 0.392,
+      "alpha_only_rho_pooled": 0.19
+    }
+  },
+  "dose_response": {
+    "n-back": {
+      "0": {
+        "posterior_alpha": -1.696,
+        "frontal_theta": -2.041
+      },
+      "1": {
+        "posterior_alpha": -1.703,
+        "frontal_theta": -2.02
+      },
+      "2": {
+        "posterior_alpha": -1.838,
+        "frontal_theta": -1.963
+      }
+    },
+    "MATB": {
+      "0": {
+        "posterior_alpha": -1.897,
+        "frontal_theta": -1.912
+      },
+      "1": {
+        "posterior_alpha": -2.048,
+        "frontal_theta": -1.939
+      },
+      "2": {
+        "posterior_alpha": -2.101,
+        "frontal_theta": -1.935
+      }
+    }
+  },
+  "cross_task": {
+    "nback->MATB": {
+      "macro_f1": 0.56,
+      "index_spearman_vs_load": 0.132,
+      "n_test": 5367
+    },
+    "MATB->nback": {
+      "macro_f1": 0.441,
+      "index_spearman_vs_load": 0.048,
+      "n_test": 5339
+    }
+  }
+}

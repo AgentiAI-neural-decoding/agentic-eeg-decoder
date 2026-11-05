@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software in your research, please cite it as below."
 type: software
-title: "Agentic EEG Decoder — Neural Decoding Berbasis Agentic AI"
+title: "Agentic EEG Decoder: analysis code for EEG cognitive-workload decoding, cross-dataset transfer, and a graded workload index"
 abstract: >
   Pipeline reproducible untuk neural decoding berbasis arsitektur Agentic AI,
   dikembangkan dalam program Penelitian Fundamental DIKTI 2026.
@@ -24,8 +24,8 @@ keywords:
   - brain-computer-interface
   - passive-bci
   - mne-python
-date-released: 2026-11-04
-version: 1.0.0
+date-released: 2026-11-05
+version: 1.1.0
 preferred-citation:
   type: article
   authors:

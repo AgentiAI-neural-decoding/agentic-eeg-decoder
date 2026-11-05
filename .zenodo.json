@@ -1,0 +1,58 @@
+{
+  "title": "Agentic EEG Decoder: analysis code for EEG cognitive-workload decoding, cross-dataset transfer, and a graded workload index",
+  "upload_type": "software",
+  "version": "1.1.0",
+  "language": "eng",
+  "license": "MIT",
+  "description": "<p>Analysis code accompanying two studies of EEG cognitive-workload decoding: a multi-specialist stacking decoder with a decomposition of cross-dataset transfer (Intelligent Automation &amp; Soft Computing 41(1):27-46, 2026, doi:10.32604/iasc.2026.088039) and a graded workload index evaluated on a 14-channel consumer montage (manuscript under review).</p><p>Includes preprocessing, feature extraction, decoders, multi-seed statistics with false-discovery-rate control, a foundation-model baseline, and cross-device analyses on public datasets (COG-BCI, STEW, EEGMAT, ds003838). Raw EEG is not redistributed.</p><p>Data integrity: the public COG-BCI release contains participant IDs with byte-identical EEG (sub-17 to sub-24 and sub-27 in every session; sub-25 and sub-28 in session S1). The tool tools/verify_cogbci_duplicates.py detects these; analyses of the graded index use the 20 participants that share no recording.</p>",
+  "creators": [
+    {
+      "name": "Mubaroq, Sugeng Rifqi",
+      "affiliation": "Digital Business Study Program, Akademi Digital Bandung, Bandung, Indonesia",
+      "orcid": "0000-0001-8933-5867"
+    }
+  ],
+  "keywords": [
+    "electroencephalography",
+    "cognitive workload",
+    "passive brain-computer interface",
+    "cross-dataset transfer",
+    "consumer EEG",
+    "reproducibility",
+    "data leakage"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.32604/iasc.2026.088039",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.6874129",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.21227/44r8-ya50",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.13026/C2JQ1P",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.18112/openneuro.ds003838.v1.0.2",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    }
+  ],
+  "grants": [],
+  "notes": "Funded by the Directorate General of Higher Education, Research, and Technology (DIKTI), Ministry of Higher Education, Science, and Technology of the Republic of Indonesia, Fundamental Research 2026."
+}

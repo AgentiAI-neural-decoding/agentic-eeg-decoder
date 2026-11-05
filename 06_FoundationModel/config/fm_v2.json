@@ -1,0 +1,52 @@
+{
+  "description": "Konfigurasi Tahap 06 \u2014 foundation-model frozen-encoder probing + class-conditional DA.",
+  "derivatives": {
+    "COG-BCI": "../02_Preprocessing/derivatives_v2/COG-BCI",
+    "STEW": "../02_Preprocessing/derivatives/STEW"
+  },
+  "common_channels": [
+    "AF3",
+    "F7",
+    "F3",
+    "FC5",
+    "T7",
+    "P7",
+    "O1",
+    "O2",
+    "P8",
+    "T8",
+    "FC6",
+    "F4",
+    "F8",
+    "AF4"
+  ],
+  "target_sfreq_hz": 128,
+  "encoder": "cbramod",
+  "encoder_options": {
+    "placeholder": {
+      "emb_dim": 128
+    },
+    "cbramod": {
+      "hf_repo": "braindecode/cbramod-pretrained",
+      "sfreq": 200,
+      "n_times": 400,
+      "scale": 100.0,
+      "note": "CBraMod via braindecode; norm=zscore (tuning: 0.727 vs scale/100 0.671, ~setara PSD); 200Hz patch200.",
+      "norm": "zscore",
+      "pooling": "mean"
+    }
+  },
+  "device": "auto",
+  "output_root": "results",
+  "cv": {
+    "n_splits": 5,
+    "max_epochs_per_dataset": 4000,
+    "random_state": 42
+  },
+  "probe": {
+    "classifier": "logreg",
+    "class_weight": "balanced"
+  },
+  "label_scheme": "extreme",
+  "_catatan": "Jalankan-ulang 2026-09-03: COG-BCI dari derivatives_v2 (21 subjek unik)."
+}

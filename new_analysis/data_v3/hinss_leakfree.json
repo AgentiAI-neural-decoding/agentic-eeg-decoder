@@ -1,0 +1,161 @@
+{
+  "method": "13_hinss_leakfree.py - transfer COG-BCI <-> Hinss tanpa kebocoran subjek.\n\nLatar: 12_overlap_hinss_cogbci.py membuktikan Hinss P01-P15 = rekaman COG-BCI sub-01..15\n(26/30 rekaman cocok subjek dan sesi). Transfer COG-BCI <-> Hinss lama karena itu menguji\nmodel pada orang yang sama. Skrip ini memisahkan:\n  - COG_all  : seluruh 21 subjek COG-BCI bersih (pembanding angka lama)\n  - COG_ov   : sub-01..15 (tumpang-tindih dengan Hinss)\n  - COG_free : sub-16,17,25,26,28,29 (tidak ada di Hinss) -> transfer bebas kebocoran\nKontrol ukuran: 30 undian acak 6 subjek dari COG_ov, agar beda COG_free vs COG_ov tidak\ntercampur efek jumlah subjek. Rujukan pada sumber/target COG_free yang sama:\ndevice-matched independen (ds003838) dan cross-device (STEW).\nFitur PSD 70-dim, LogReg (transfer_lib.transfer_f1). Jalankan dengan\nND_FEAT_ORIG=03_Features/features_v2 ND_DATA_OUT=new_analysis/data_v2.\nOutput: $ND_DATA_OUT/hinss_leakfree.json\n",
+  "workload_extreme": {
+    "free_subjects": [
+      "COG-BCI-16",
+      "COG-BCI-17",
+      "COG-BCI-25",
+      "COG-BCI-26",
+      "COG-BCI-29"
+    ],
+    "COG_all->Hinss": {
+      "f1": 0.6418,
+      "acc": 0.8054,
+      "n_src_subj": 20,
+      "n_tgt_subj": 15
+    },
+    "Hinss->COG_all": {
+      "f1": 0.6505,
+      "acc": 0.668,
+      "n_src_subj": 15,
+      "n_tgt_subj": 20
+    },
+    "COG_ov->Hinss": {
+      "f1": 0.645,
+      "acc": 0.8062,
+      "n_src_subj": 15,
+      "n_tgt_subj": 15
+    },
+    "Hinss->COG_ov": {
+      "f1": 0.6603,
+      "acc": 0.6824,
+      "n_src_subj": 15,
+      "n_tgt_subj": 15
+    },
+    "COG_free->Hinss": {
+      "f1": 0.6264,
+      "acc": 0.7942,
+      "n_src_subj": 5,
+      "n_tgt_subj": 15
+    },
+    "Hinss->COG_free": {
+      "f1": 0.617,
+      "acc": 0.623,
+      "n_src_subj": 15,
+      "n_tgt_subj": 5
+    },
+    "COG_free->ds003838": {
+      "f1": 0.6411,
+      "acc": 0.6907,
+      "n_src_subj": 5,
+      "n_tgt_subj": 65
+    },
+    "ds003838->COG_free": {
+      "f1": 0.704,
+      "acc": 0.7991,
+      "n_src_subj": 65,
+      "n_tgt_subj": 5
+    },
+    "COG_free->STEW": {
+      "f1": 0.4157,
+      "acc": 0.4985,
+      "n_src_subj": 5,
+      "n_tgt_subj": 47
+    },
+    "STEW->COG_free": {
+      "f1": 0.5428,
+      "acc": 0.543,
+      "n_src_subj": 47,
+      "n_tgt_subj": 5
+    },
+    "size_matched_COG_ov6->Hinss": {
+      "mean_f1": 0.6669,
+      "sd": 0.0241,
+      "n_draws": 30
+    },
+    "size_matched_Hinss->COG_ov6": {
+      "mean_f1": 0.6574,
+      "sd": 0.0256,
+      "n_draws": 30
+    }
+  },
+  "workload_binary": {
+    "free_subjects": [
+      "COG-BCI-16",
+      "COG-BCI-17",
+      "COG-BCI-25",
+      "COG-BCI-26",
+      "COG-BCI-29"
+    ],
+    "COG_all->Hinss": {
+      "f1": 0.3814,
+      "acc": 0.5869,
+      "n_src_subj": 20,
+      "n_tgt_subj": 15
+    },
+    "Hinss->COG_all": {
+      "f1": 0.4535,
+      "acc": 0.4624,
+      "n_src_subj": 15,
+      "n_tgt_subj": 20
+    },
+    "COG_ov->Hinss": {
+      "f1": 0.3803,
+      "acc": 0.5859,
+      "n_src_subj": 15,
+      "n_tgt_subj": 15
+    },
+    "Hinss->COG_ov": {
+      "f1": 0.4596,
+      "acc": 0.4737,
+      "n_src_subj": 15,
+      "n_tgt_subj": 15
+    },
+    "COG_free->Hinss": {
+      "f1": 0.4485,
+      "acc": 0.5981,
+      "n_src_subj": 5,
+      "n_tgt_subj": 15
+    },
+    "Hinss->COG_free": {
+      "f1": 0.4272,
+      "acc": 0.4275,
+      "n_src_subj": 15,
+      "n_tgt_subj": 5
+    },
+    "COG_free->ds003838": {
+      "f1": 0.4814,
+      "acc": 0.6064,
+      "n_src_subj": 5,
+      "n_tgt_subj": 65
+    },
+    "ds003838->COG_free": {
+      "f1": 0.5563,
+      "acc": 0.6809,
+      "n_src_subj": 65,
+      "n_tgt_subj": 5
+    },
+    "COG_free->STEW": {
+      "f1": 0.4871,
+      "acc": 0.4983,
+      "n_src_subj": 5,
+      "n_tgt_subj": 47
+    },
+    "STEW->COG_free": {
+      "f1": 0.3823,
+      "acc": 0.3824,
+      "n_src_subj": 47,
+      "n_tgt_subj": 5
+    },
+    "size_matched_COG_ov6->Hinss": {
+      "mean_f1": 0.4348,
+      "sd": 0.0222,
+      "n_draws": 30
+    },
+    "size_matched_Hinss->COG_ov6": {
+      "mean_f1": 0.4626,
+      "sd": 0.0237,
+      "n_draws": 30
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "dataset_id": "COG-BCI",
+  "bids_root": "../01_Akuisisi_Data/raw_v2/COG-BCI",
+  "output_root": "derivatives_v2/COG-BCI",
+  "tasks": [
+    "MATB",
+    "Nback",
+    "PVT",
+    "Flanker"
+  ],
+  "sessions": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "resting_states": [
+    "RSEC",
+    "RSEO"
+  ],
+  "montage": "standard_1020",
+  "line_freq_hz": 50,
+  "notch_freqs_hz": [
+    50,
+    100,
+    150
+  ],
+  "bandpass_hz": [
+    0.5,
+    45.0
+  ],
+  "ica_highpass_hz": 1.0,
+  "resample_hz": 250,
+  "reference": "average",
+  "bad_channel_detection": {
+    "method": "lof",
+    "threshold": 1.5
+  },
+  "ica": {
+    "n_components": 0.99,
+    "method": "infomax",
+    "fit_params": {
+      "extended": true
+    },
+    "random_state": 42,
+    "max_iter": 1000
+  },
+  "iclabel": {
+    "enabled": true,
+    "reject_labels": [
+      "muscle artifact",
+      "eye blink",
+      "heart beat",
+      "line noise",
+      "channel noise"
+    ],
+    "min_prob": 0.7
+  },
+  "epoching": {
+    "tmin_s": 0.0,
+    "tmax_s": 2.0,
+    "baseline": null,
+    "reject_uv": {
+      "eeg": 0.00015
+    }
+  },
+  "save_format": [
+    "fif"
+  ],
+  "qc_plots": true,
+  "_catatan": "Jalankan-ulang 2026-09-03 dari raw_v2 (terverifikasi md5+CRC). HANYA 21 subjek unik: sembilan subjek kembar dataset (sub-17..24,27) diwakili sub-17 saja."
+}

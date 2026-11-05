@@ -37,13 +37,15 @@ def resolve_device(pref: str = "auto") -> str:
 
 # --- Skema label (selaras 03_Features/config/features.json) ---
 _SCHEMES = {
-    "binary": {  # longgar: rest+easy vs sulit
-        "low": {"RS_Beg_EC", "RS_Beg_EO", "RS_End_Ec", "RS_End_EO", "MATBeasy", "zeroBACK"},
-        "high": {"MATBmed", "MATBdiff", "oneBACK", "twoBACK", "PVT", "Flanker"},
+    "binary": {  # longgar: rest+easy vs sulit. ds003838: rest+control(listen) vs memorize.
+        "low": {"RS_Beg_EC", "RS_Beg_EO", "RS_End_Ec", "RS_End_EO", "MATBeasy", "zeroBACK",
+                "rest", "ctrl5", "ctrl9", "ctrl13"},
+        "high": {"MATBmed", "MATBdiff", "oneBACK", "twoBACK", "PVT", "Flanker",
+                 "mem5", "mem9", "mem13"},
     },
     "extreme": {  # harmonisasi konstruk: rest vs paling-menuntut (sebanding STEW rest/SIMKAP)
-        "low": {"RS_Beg_EC", "RS_Beg_EO", "RS_End_Ec", "RS_End_EO"},
-        "high": {"MATBdiff", "twoBACK"},
+        "low": {"RS_Beg_EC", "RS_Beg_EO", "RS_End_Ec", "RS_End_EO", "rest"},
+        "high": {"MATBdiff", "twoBACK", "mem13"},
     },
 }
 
@@ -63,7 +65,7 @@ def _parse(path: Path, dataset: str) -> dict:
     name = path.stem
     sub = re.search(r"sub-(\w+?)_", name)
     sub = sub.group(1) if sub else "??"
-    if dataset == "COG-BCI":
+    if dataset in ("COG-BCI", "ds003838"):
         t = re.search(r"task-(.+?)_run", name)
         return {"subject": sub, "task": t.group(1) if t else "?"}
     t = re.search(r"task-(lo|hi)", name)

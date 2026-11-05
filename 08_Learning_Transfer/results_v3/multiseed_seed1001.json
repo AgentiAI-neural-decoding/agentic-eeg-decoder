@@ -1,0 +1,121 @@
+{
+  "seed": 1001,
+  "graded": {
+    "n-back": {
+      "n_epochs": 9000,
+      "n_subjects": 20,
+      "n_folds": 8,
+      "macro_f1_orchestrator": 0.3480103721551032,
+      "macro_f1_specialists": {
+        "spectral": 0.36009458031625274,
+        "riemann": 0.34449103787787844,
+        "csp": 0.3014079778349862
+      },
+      "load_index_per_true_level": {
+        "0": 0.9881953229084591,
+        "1": 0.9939123877054975,
+        "2": 1.015858844717977
+      },
+      "monotonic_increasing": true,
+      "spearman_epoch_rho": 0.08864504150186421,
+      "spearman_epoch_p": 3.6066382895706347e-17,
+      "spearman_subjectmean_rho": 0.1685505276042005,
+      "spearman_subjectmean_p": 0.1979704761520263,
+      "ordinal_mae": 0.6614444444444444
+    },
+    "MATB": {
+      "n_epochs": 9000,
+      "n_subjects": 20,
+      "n_folds": 8,
+      "macro_f1_orchestrator": 0.4978162520737434,
+      "macro_f1_specialists": {
+        "spectral": 0.4303484971968785,
+        "riemann": 0.45969706850336123,
+        "csp": 0.49738950850215624
+      },
+      "load_index_per_true_level": {
+        "0": 0.8379194565568904,
+        "1": 1.0531299936062073,
+        "2": 1.1534250679912552
+      },
+      "monotonic_increasing": true,
+      "spearman_epoch_rho": 0.3993298986184532,
+      "spearman_epoch_p": 0.0,
+      "spearman_subjectmean_rho": 0.5645853337231611,
+      "spearman_subjectmean_p": 2.6185971301198316e-06,
+      "ordinal_mae": 0.6408888888888888
+    }
+  },
+  "baseline": {
+    "n-back": {
+      "n_subjects": 20,
+      "per_subject_rho_median": 0.12264617844040043,
+      "per_subject_rho_iqr": [
+        -0.016135663748016477,
+        0.19958848163950804
+      ],
+      "pct_subjects_positive": 70.0,
+      "pct_subjects_monotonic": 45.0,
+      "decoder_rho_pooled": 0.08864504150186421,
+      "alpha_rho_pooled": 0.0887215646840927,
+      "fold_change": 0.9991374906145878,
+      "paired_median_rho_decoder": 0.12264617844040043,
+      "paired_median_rho_alpha": 0.15754831085008278,
+      "wilcoxon_stat": 96.0,
+      "wilcoxon_p": 0.7561664581298828
+    },
+    "MATB": {
+      "n_subjects": 20,
+      "per_subject_rho_median": 0.5501088439187891,
+      "per_subject_rho_iqr": [
+        0.42904816625326436,
+        0.6415987063901092
+      ],
+      "pct_subjects_positive": 100.0,
+      "pct_subjects_monotonic": 75.0,
+      "decoder_rho_pooled": 0.3993298986184532,
+      "alpha_rho_pooled": 0.17232081314424244,
+      "fold_change": 2.317363128296006,
+      "paired_median_rho_decoder": 0.5501088439187891,
+      "paired_median_rho_alpha": 0.17050234153062174,
+      "wilcoxon_stat": 0.0,
+      "wilcoxon_p": 1.9073486328125e-06
+    }
+  },
+  "montage": {
+    "nback": {
+      "n_full_channels": 58,
+      "consumer_14ch": {
+        "macro_f1": 0.3480103721551032,
+        "spearman": 0.08864504150186421,
+        "ordinal_mae": 0.6614444444444444
+      },
+      "full_montage": {
+        "macro_f1": 0.33842284949171386,
+        "spearman": 0.07503725234048345,
+        "ordinal_mae": 0.6615555555555556
+      },
+      "retention": {
+        "macro_f1_pct": 102.83300098612995,
+        "spearman_pct": 118.13471140925454
+      }
+    },
+    "matb": {
+      "n_full_channels": 58,
+      "consumer_14ch": {
+        "macro_f1": 0.4978162520737434,
+        "spearman": 0.3993298986184532,
+        "ordinal_mae": 0.6408888888888888
+      },
+      "full_montage": {
+        "macro_f1": 0.530393781502631,
+        "spearman": 0.4453403036793697,
+        "ordinal_mae": 0.6046666666666667
+      },
+      "retention": {
+        "macro_f1_pct": 93.85785984583117,
+        "spearman_pct": 89.66848392548758
+      }
+    }
+  }
+}

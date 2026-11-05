@@ -1,0 +1,52 @@
+{
+  "nback": {
+    "n_full_channels": 58,
+    "consumer_14ch": {
+      "macro_f1": 0.32,
+      "spearman": 0.086,
+      "ordinal_mae": 0.667
+    },
+    "full_montage": {
+      "macro_f1": 0.351,
+      "spearman": 0.118,
+      "ordinal_mae": 0.667
+    },
+    "test_retest": {
+      "mean": {
+        "icc21": 0.41,
+        "n_subjects": 20,
+        "n_sessions": 3
+      },
+      "contrast": {
+        "icc21": -0.031,
+        "n_subjects": 20,
+        "n_sessions": 3
+      }
+    }
+  },
+  "matb": {
+    "n_full_channels": 58,
+    "consumer_14ch": {
+      "macro_f1": 0.48,
+      "spearman": 0.392,
+      "ordinal_mae": 0.629
+    },
+    "full_montage": {
+      "macro_f1": 0.516,
+      "spearman": 0.427,
+      "ordinal_mae": 0.6
+    },
+    "test_retest": {
+      "mean": {
+        "icc21": 0.524,
+        "n_subjects": 20,
+        "n_sessions": 3
+      },
+      "contrast": {
+        "icc21": 0.239,
+        "n_subjects": 20,
+        "n_sessions": 3
+      }
+    }
+  }
+}

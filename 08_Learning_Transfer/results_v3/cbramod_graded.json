@@ -1,0 +1,100 @@
+{
+  "method": "cbramod_graded_v2.py - baseline foundation model untuk indeks beban bertingkat (COG-BCI n=21).\n\nMenjawab \"mengapa tidak memakai foundation model?\" dengan protokol yang sama dengan\ngraded_v2.py: GroupKFold-8 lintas subjek, subsampel 9000 epoch (seed 42), indeks kontinu\nE[level] = sum_k k * P(k), Spearman tingkat epoch dan rerata subjek, macro-F1 3 kelas.\nEncoder: CBraMod pretrained (braindecode/cbramod-pretrained), BEKU, norm z-score, mean pooling,\n14 kanal Emotiv, 200 Hz, 2 s. Probe: StandardScaler + LogisticRegression (balanced).\nKontrol: arsitektur sama dengan bobot acak (tanpa pretraining).\nInput: 02_Preprocessing/derivatives_v3/COG-BCI (20 subjek, tanpa rekaman bersama).\nOutput: 08_Learning_Transfer/results_v3/cbramod_graded.json\n",
+  "device": "cuda",
+  "COG-BCI_matb_graded": {
+    "cbramod_pretrained": {
+      "n_epochs": 9000,
+      "n_subjects": 20,
+      "n_folds": 8,
+      "macro_f1": 0.425,
+      "chance_macro_f1": 0.333,
+      "load_index_per_true_level": {
+        "0": 0.89,
+        "1": 1.044,
+        "2": 1.084
+      },
+      "monotonic_increasing": true,
+      "spearman_index_vs_level_epoch": {
+        "rho": 0.268,
+        "p": 4.7488159106018246e-148
+      },
+      "spearman_index_vs_level_subjectmean": {
+        "rho": 0.502,
+        "p": 0.0
+      },
+      "per_subject_rho_median": 0.273,
+      "pct_subjects_positive": 100.0
+    },
+    "cbramod_randominit": {
+      "n_epochs": 9000,
+      "n_subjects": 20,
+      "n_folds": 8,
+      "macro_f1": 0.382,
+      "chance_macro_f1": 0.333,
+      "load_index_per_true_level": {
+        "0": 0.954,
+        "1": 1.028,
+        "2": 1.019
+      },
+      "monotonic_increasing": false,
+      "spearman_index_vs_level_epoch": {
+        "rho": 0.138,
+        "p": 1.2637351210116053e-39
+      },
+      "spearman_index_vs_level_subjectmean": {
+        "rho": 0.291,
+        "p": 0.024
+      },
+      "per_subject_rho_median": 0.147,
+      "pct_subjects_positive": 85.0
+    }
+  },
+  "COG-BCI_nback_graded": {
+    "cbramod_pretrained": {
+      "n_epochs": 9000,
+      "n_subjects": 20,
+      "n_folds": 8,
+      "macro_f1": 0.347,
+      "chance_macro_f1": 0.333,
+      "load_index_per_true_level": {
+        "0": 0.976,
+        "1": 0.989,
+        "2": 1.013
+      },
+      "monotonic_increasing": true,
+      "spearman_index_vs_level_epoch": {
+        "rho": 0.079,
+        "p": 7.54662602805044e-14
+      },
+      "spearman_index_vs_level_subjectmean": {
+        "rho": 0.14,
+        "p": 0.2851
+      },
+      "per_subject_rho_median": 0.112,
+      "pct_subjects_positive": 85.0
+    },
+    "cbramod_randominit": {
+      "n_epochs": 9000,
+      "n_subjects": 20,
+      "n_folds": 8,
+      "macro_f1": 0.335,
+      "chance_macro_f1": 0.333,
+      "load_index_per_true_level": {
+        "0": 1.0,
+        "1": 0.995,
+        "2": 1.001
+      },
+      "monotonic_increasing": false,
+      "spearman_index_vs_level_epoch": {
+        "rho": -0.0,
+        "p": 0.975295376631648
+      },
+      "spearman_index_vs_level_subjectmean": {
+        "rho": 0.059,
+        "p": 0.6547
+      },
+      "per_subject_rho_median": 0.014,
+      "pct_subjects_positive": 60.0
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "description": "Konfigurasi ekstraksi fitur Tahap 03 \u2014 transfer-compatible cross-dataset (COG-BCI <-> STEW) untuk decoding beban kognitif.",
+  "common_channels": [
+    "AF3",
+    "F7",
+    "F3",
+    "FC5",
+    "T7",
+    "P7",
+    "O1",
+    "O2",
+    "P8",
+    "T8",
+    "FC6",
+    "F4",
+    "F8",
+    "AF4"
+  ],
+  "target_sfreq_hz": 128,
+  "bands": {
+    "delta": [
+      1.0,
+      4.0
+    ],
+    "theta": [
+      4.0,
+      8.0
+    ],
+    "alpha": [
+      8.0,
+      13.0
+    ],
+    "beta": [
+      13.0,
+      30.0
+    ],
+    "gamma": [
+      30.0,
+      45.0
+    ]
+  },
+  "psd": {
+    "method": "welch",
+    "n_fft_s": 2.0,
+    "relative_power": true,
+    "log_transform": true
+  },
+  "covariance": {
+    "estimator": "oas",
+    "save_tangent_global": true
+  },
+  "inputs": {
+    "COG-BCI": "../02_Preprocessing/derivatives_v2/COG-BCI",
+    "STEW": "../02_Preprocessing/derivatives/STEW",
+    "ds003838": "../new_analysis/derivatives/ds003838"
+  },
+  "output_root": "features_v2",
+  "label_schemes": {
+    "workload_binary": {
+      "datasets": [
+        "COG-BCI",
+        "STEW",
+        "ds003838"
+      ],
+      "comment": "Target PRIMER transfer-learning: beban kognitif rendah(0) vs tinggi(1), selaras antar-dataset. ds003838: rest+control(listen, tanpa tuntutan memori)=low, memory(memorize)=high.",
+      "COG-BCI": {
+        "low": [
+          "RS_Beg_EC",
+          "RS_Beg_EO",
+          "RS_End_Ec",
+          "RS_End_EO",
+          "MATBeasy",
+          "zeroBACK"
+        ],
+        "high": [
+          "MATBmed",
+          "MATBdiff",
+          "oneBACK",
+          "twoBACK",
+          "PVT",
+          "Flanker"
+        ]
+      },
+      "STEW": {
+        "lo": 0,
+        "hi": 1
+      },
+      "ds003838": {
+        "low": [
+          "rest",
+          "ctrl5",
+          "ctrl9",
+          "ctrl13"
+        ],
+        "high": [
+          "mem5",
+          "mem9",
+          "mem13"
+        ]
+      }
+    },
+    "workload_extreme": {
+      "datasets": [
+        "COG-BCI",
+        "STEW",
+        "ds003838"
+      ],
+      "comment": "Harmonisasi konstruk: kontras EKSTREM agar sebanding dgn STEW (rest vs SIMKAP-multitasking). COG-BCI low=resting saja, high=MATBdiff+twoBACK (paling menuntut; MATB~SIMKAP). ds003838 low=rest, high=mem13 (span-overload 13 digit). Kondisi ambigu dibuang.",
+      "COG-BCI": {
+        "low": [
+          "RS_Beg_EC",
+          "RS_Beg_EO",
+          "RS_End_Ec",
+          "RS_End_EO"
+        ],
+        "high": [
+          "MATBdiff",
+          "twoBACK"
+        ]
+      },
+      "STEW": {
+        "lo": 0,
+        "hi": 1
+      },
+      "ds003838": {
+        "low": [
+          "rest"
+        ],
+        "high": [
+          "mem13"
+        ]
+      }
+    },
+    "nback_graded": {
+      "datasets": [
+        "COG-BCI"
+      ],
+      "comment": "Target sekunder within-dataset: beban memori kerja bertingkat.",
+      "COG-BCI": {
+        "zeroBACK": 0,
+        "oneBACK": 1,
+        "twoBACK": 2
+      }
+    },
+    "matb_graded": {
+      "datasets": [
+        "COG-BCI"
+      ],
+      "comment": "Target sekunder within-dataset: beban MATB bertingkat.",
+      "COG-BCI": {
+        "MATBeasy": 0,
+        "MATBmed": 1,
+        "MATBdiff": 2
+      }
+    },
+    "span_graded": {
+      "datasets": [
+        "ds003838"
+      ],
+      "comment": "Target sekunder within-dataset (ds003838): beban memori-kerja digit-span bertingkat 5/9/13 digit (kondisi memorize).",
+      "ds003838": {
+        "mem5": 0,
+        "mem9": 1,
+        "mem13": 2
+      }
+    },
+    "mem_vs_ctrl": {
+      "datasets": [
+        "ds003838"
+      ],
+      "comment": "Kontras muat-memori pada input sensorik tercocok (ds003838): listen/control(0) vs memorize/memory(1) \u2014 sama-sama dengar digit, beda tuntutan penyimpanan WM.",
+      "ds003838": {
+        "control": [
+          "ctrl5",
+          "ctrl9",
+          "ctrl13"
+        ],
+        "memory": [
+          "mem5",
+          "mem9",
+          "mem13"
+        ]
+      }
+    }
+  },
+  "_catatan": "Jalankan-ulang 2026-09-03. COG-BCI dari derivatives_v2 (21 subjek unik, raw_v2 terverifikasi). STEW & ds003838 tetap dari turunan lama karena terbukti bersih."
+}

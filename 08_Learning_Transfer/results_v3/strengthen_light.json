@@ -1,0 +1,128 @@
+{
+  "temporal": {
+    "n-back": {
+      "2": {
+        "seconds": 2,
+        "spearman": 0.086,
+        "within_level_sd": 0.12,
+        "n_windows": 8000
+      },
+      "4": {
+        "seconds": 4,
+        "spearman": 0.1,
+        "within_level_sd": 0.104,
+        "n_windows": 3985
+      },
+      "8": {
+        "seconds": 8,
+        "spearman": 0.109,
+        "within_level_sd": 0.094,
+        "n_windows": 1978
+      },
+      "20": {
+        "seconds": 20,
+        "spearman": 0.113,
+        "within_level_sd": 0.087,
+        "n_windows": 775
+      }
+    },
+    "MATB": {
+      "2": {
+        "seconds": 2,
+        "spearman": 0.392,
+        "within_level_sd": 0.291,
+        "n_windows": 8000
+      },
+      "4": {
+        "seconds": 4,
+        "spearman": 0.425,
+        "within_level_sd": 0.264,
+        "n_windows": 3988
+      },
+      "8": {
+        "seconds": 8,
+        "spearman": 0.45,
+        "within_level_sd": 0.247,
+        "n_windows": 1981
+      },
+      "20": {
+        "seconds": 20,
+        "spearman": 0.47,
+        "within_level_sd": 0.234,
+        "n_windows": 779
+      }
+    }
+  },
+  "ablation": {
+    "n-back": {
+      "2 (O1,O2)": {
+        "n_channels": 2,
+        "spearman": 0.143
+      },
+      "4 posterior (O1,O2,P7,P8)": {
+        "n_channels": 4,
+        "spearman": 0.126
+      },
+      "6 (+T7,T8)": {
+        "n_channels": 6,
+        "spearman": 0.128
+      },
+      "10 (+frontal)": {
+        "n_channels": 10,
+        "spearman": 0.136
+      },
+      "14 (all)": {
+        "n_channels": 14,
+        "spearman": 0.149
+      }
+    },
+    "MATB": {
+      "2 (O1,O2)": {
+        "n_channels": 2,
+        "spearman": 0.11
+      },
+      "4 posterior (O1,O2,P7,P8)": {
+        "n_channels": 4,
+        "spearman": 0.173
+      },
+      "6 (+T7,T8)": {
+        "n_channels": 6,
+        "spearman": 0.161
+      },
+      "10 (+frontal)": {
+        "n_channels": 10,
+        "spearman": 0.182
+      },
+      "14 (all)": {
+        "n_channels": 14,
+        "spearman": 0.219
+      }
+    }
+  },
+  "insilico": {
+    "n-back": {
+      "no hysteresis": {
+        "switches_per_min": 5.12
+      },
+      "hysteresis (0.5 SD)": {
+        "switches_per_min": 1.58
+      },
+      "thresholds": {
+        "low_q33": 0.944,
+        "high_q67": 1.051
+      }
+    },
+    "MATB": {
+      "no hysteresis": {
+        "switches_per_min": 4.01
+      },
+      "hysteresis (0.5 SD)": {
+        "switches_per_min": 1.26
+      },
+      "thresholds": {
+        "low_q33": 0.867,
+        "high_q67": 1.176
+      }
+    }
+  }
+}

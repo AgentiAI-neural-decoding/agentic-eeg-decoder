@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "dibuat": "2026-09-05",
+    "sumber_fitur": "/home/adb/neuraldecoding/03_Features/features_v3",
+    "catatan": "Selang kepercayaan untuk nilai ICC yang sudah dilaporkan icc_montage.json. Jalur perhitungan indeks identik dengan icc_montage_v2.py (cap 8000, seed 42, GroupKFold 8). Selang F mengikuti McGraw & Wong 1996 untuk ICC(A,1); bootstrap persentil 5000 ulangan atas subjek.",
+    "alpha": 0.05,
+    "n_bootstrap": 5000
+  },
+  "nback": {
+    "mean": {
+      "icc21": 0.41,
+      "n_subjects": 20,
+      "n_sessions": 3,
+      "ci95_F": [
+        0.145,
+        0.671
+      ],
+      "ci95_bootstrap": [
+        0.14,
+        0.56
+      ],
+      "n_bootstrap_sah": 5000,
+      "komponen_ragam": {
+        "MSR": 0.008271,
+        "MSC": 0.006133,
+        "MSE": 0.002563
+      }
+    },
+    "contrast": {
+      "icc21": -0.031,
+      "n_subjects": 20,
+      "n_sessions": 3,
+      "ci95_F": [
+        -0.244,
+        0.283
+      ],
+      "ci95_bootstrap": [
+        -0.202,
+        0.183
+      ],
+      "n_bootstrap_sah": 5000,
+      "komponen_ragam": {
+        "MSR": 0.00687,
+        "MSC": 0.001728,
+        "MSE": 0.007522
+      }
+    }
+  },
+  "matb": {
+    "mean": {
+      "icc21": 0.524,
+      "n_subjects": 20,
+      "n_sessions": 3,
+      "ci95_F": [
+        0.264,
+        0.75
+      ],
+      "ci95_bootstrap": [
+        0.236,
+        0.747
+      ],
+      "n_bootstrap_sah": 5000,
+      "komponen_ragam": {
+        "MSR": 0.082313,
+        "MSC": 0.027994,
+        "MSE": 0.018755
+      }
+    },
+    "contrast": {
+      "icc21": 0.239,
+      "n_subjects": 20,
+      "n_sessions": 3,
+      "ci95_F": [
+        -0.012,
+        0.534
+      ],
+      "ci95_bootstrap": [
+        -0.013,
+        0.443
+      ],
+      "n_bootstrap_sah": 5000,
+      "komponen_ragam": {
+        "MSR": 0.060623,
+        "MSC": 0.072942,
+        "MSE": 0.030208
+      }
+    }
+  }
+}

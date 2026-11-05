@@ -28,7 +28,28 @@ and transfer analyses (`05_Experiments/`), foundation-model probing (`06_Foundat
 and domain-adversarial harmonization (`07_Harmonization/`). Raw EEG data are not
 redistributed; download them from the original sources listed below.
 
-Documentation inside the stage folders is written in Indonesian.
+Documentation inside the stage folders is written in Indonesian, except
+`08_Learning_Transfer/README.md`.
+
+### Graded workload index (manuscript under review)
+
+Version 1.1.0 adds the code of a second study: a continuous index of graded cognitive
+workload on the 14-channel consumer montage, its reliability, a frozen foundation-model
+baseline, and its transfer to a consumer headset. See
+[`08_Learning_Transfer/README.md`](08_Learning_Transfer/README.md) and
+`new_analysis/scripts/`.
+
+### COG-BCI data integrity
+
+The public COG-BCI release contains participant IDs with byte-identical EEG: sub-17 to
+sub-24 and sub-27 share every recording, and sub-25 and sub-28 share session S1. Any
+cross-subject split that treats these IDs as different people places the same recording in
+training and test data. [`tools/verify_cogbci_duplicates.py`](tools/verify_cogbci_duplicates.py)
+detects them in any copy of the release. The graded-index analyses exclude every ID that
+shares a recording with another ID, keeping the lowest-numbered ID of each cluster
+(20 participants). The Neuroergonomics 2021 hackathon data (Hinss2021) are recordings of
+COG-BCI participants sub-01 to sub-15
+(`new_analysis/scripts/12_overlap_hinss_cogbci.py`).
 
 ---
 

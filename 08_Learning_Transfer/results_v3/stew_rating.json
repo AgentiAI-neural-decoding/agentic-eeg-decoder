@@ -1,0 +1,52 @@
+{
+  "method": "stew_rating_v2.py - does the graded MATB index transfer to a consumer headset?\n\nTrain the graded MATB decoder on clean COG-BCI (20 unique subjects, research-grade,\n14-channel harmonised features), apply it unchanged to STEW (Emotiv EPOC, 47 subjects,\nrest vs SIMKAP multitasking), and test the resulting continuous index against\n(a) the task contrast within each subject and (b) the subjective workload ratings (1-9)\nthat STEW participants gave for each condition.\n\nComparators on the same STEW epochs:\n  alpha_only   : negative posterior alpha log-relative power (no training at all).\n  stew_matched : the same decoder trained within STEW (GroupKFold-8 out-of-fold, binary\n                 rest vs task), i.e. what a device-matched model achieves.\n\nFamily of tests fixed before running (per comparator):\n  T1 hi > lo within subject (Wilcoxon signed-rank, one-sided, subject means)\n  T2 Spearman of delta-index (hi - lo) with delta-rating (hi - lo) across subjects\n  T3 Spearman of index with rating over subject-condition means (2 per subject; descriptive)\nInputs : 03_Features/features_v3/{COG-BCI_matb_graded,STEW_workload_binary}.npz,\n         01_Akuisisi_Data/raw/STEW/ratings.txt (subject, rest rating, task rating)\nOutput : 08_Learning_Transfer/results_v3/stew_rating.json\n",
+  "n_ratings": 45,
+  "matb_index_transfer": {
+    "n_subjects": 39,
+    "n_rated": 36,
+    "epoch_auc_hi_vs_lo": 0.501,
+    "T1_pct_subjects_hi_gt_lo": 56.4,
+    "T1_median_delta_index": 0.0035,
+    "T1_wilcoxon_p_greater": 0.2469639324954187,
+    "T2_spearman_delta_index_vs_delta_rating": {
+      "rho": -0.101,
+      "p": 0.5595851653407115
+    },
+    "T3_spearman_index_vs_rating_pooled": {
+      "rho": 0.085,
+      "p": 0.47799571798792934
+    }
+  },
+  "alpha_only": {
+    "n_subjects": 39,
+    "n_rated": 36,
+    "epoch_auc_hi_vs_lo": 0.611,
+    "T1_pct_subjects_hi_gt_lo": 74.4,
+    "T1_median_delta_index": 0.319,
+    "T1_wilcoxon_p_greater": 3.6740699215442874e-05,
+    "T2_spearman_delta_index_vs_delta_rating": {
+      "rho": 0.35,
+      "p": 0.03617309274863932
+    },
+    "T3_spearman_index_vs_rating_pooled": {
+      "rho": 0.306,
+      "p": 0.008864555160074724
+    }
+  },
+  "stew_matched": {
+    "n_subjects": 39,
+    "n_rated": 36,
+    "epoch_auc_hi_vs_lo": 0.85,
+    "T1_pct_subjects_hi_gt_lo": 97.4,
+    "T1_median_delta_index": 0.3669,
+    "T1_wilcoxon_p_greater": 3.637978807091713e-12,
+    "T2_spearman_delta_index_vs_delta_rating": {
+      "rho": -0.29,
+      "p": 0.08616697261017711
+    },
+    "T3_spearman_index_vs_rating_pooled": {
+      "rho": 0.728,
+      "p": 4.267630630267521e-13
+    }
+  }
+}

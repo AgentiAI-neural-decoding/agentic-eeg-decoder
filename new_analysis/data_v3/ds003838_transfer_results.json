@@ -1,0 +1,160 @@
+{
+  "workload_extreme": {
+    "within_ceiling": {
+      "COG-BCI": {
+        "within_f1": 0.7318,
+        "within_f1_std": 0.0669,
+        "n_epoch": 24697,
+        "n_subj": 20
+      },
+      "Hinss": {
+        "within_f1": 0.7773,
+        "within_f1_std": 0.0609,
+        "n_epoch": 5062,
+        "n_subj": 15
+      },
+      "STEW": {
+        "within_f1": 0.732,
+        "within_f1_std": 0.0299,
+        "n_epoch": 9491,
+        "n_subj": 47
+      },
+      "ds003838": {
+        "within_f1": 0.731,
+        "within_f1_std": 0.0362,
+        "n_epoch": 36248,
+        "n_subj": 65
+      }
+    },
+    "transfer": {
+      "ds003838->COG-BCI": {
+        "kind": "device-matched",
+        "f1_psd": 0.6523,
+        "acc_psd": 0.7796,
+        "f1_tangent": 0.5371
+      },
+      "COG-BCI->ds003838": {
+        "kind": "device-matched",
+        "f1_psd": 0.6317,
+        "acc_psd": 0.6747,
+        "f1_tangent": 0.701
+      },
+      "ds003838->Hinss": {
+        "kind": "device-matched",
+        "f1_psd": 0.505,
+        "acc_psd": 0.7392,
+        "f1_tangent": 0.4296
+      },
+      "Hinss->ds003838": {
+        "kind": "device-matched",
+        "f1_psd": 0.3784,
+        "acc_psd": 0.3785,
+        "f1_tangent": 0.4112
+      },
+      "ds003838->STEW": {
+        "kind": "cross-device",
+        "f1_psd": 0.4369,
+        "acc_psd": 0.5069,
+        "f1_tangent": 0.3789
+      },
+      "STEW->ds003838": {
+        "kind": "cross-device",
+        "f1_psd": 0.3251,
+        "acc_psd": 0.3282,
+        "f1_tangent": 0.2585
+      },
+      "COG-BCI->STEW": {
+        "kind": "cross-device",
+        "f1_psd": 0.474,
+        "acc_psd": 0.5353
+      }
+    },
+    "poolB": {
+      "COG-BCI+Hinss->ds003838": 0.6086,
+      "COG-BCI+Hinss+ds003838->STEW": 0.4099,
+      "COG-BCI+Hinss->STEW": 0.4963
+    }
+  },
+  "workload_binary": {
+    "within_ceiling": {
+      "COG-BCI": {
+        "within_f1": 0.4736,
+        "within_f1_std": 0.0282,
+        "n_epoch": 96817,
+        "n_subj": 20
+      },
+      "Hinss": {
+        "within_f1": 0.6145,
+        "within_f1_std": 0.0309,
+        "n_epoch": 13346,
+        "n_subj": 15
+      },
+      "STEW": {
+        "within_f1": 0.732,
+        "within_f1_std": 0.0299,
+        "n_epoch": 9491,
+        "n_subj": 47
+      },
+      "ds003838": {
+        "within_f1": 0.5258,
+        "within_f1_std": 0.0064,
+        "n_epoch": 96617,
+        "n_subj": 65
+      }
+    },
+    "transfer": {
+      "ds003838->COG-BCI": {
+        "kind": "device-matched",
+        "f1_psd": 0.5341,
+        "acc_psd": 0.6835,
+        "f1_tangent": 0.5353
+      },
+      "COG-BCI->ds003838": {
+        "kind": "device-matched",
+        "f1_psd": 0.4658,
+        "acc_psd": 0.6217,
+        "f1_tangent": 0.4614
+      },
+      "ds003838->Hinss": {
+        "kind": "device-matched",
+        "f1_psd": 0.4548,
+        "acc_psd": 0.5937,
+        "f1_tangent": 0.5162
+      },
+      "Hinss->ds003838": {
+        "kind": "device-matched",
+        "f1_psd": 0.4457,
+        "acc_psd": 0.4573,
+        "f1_tangent": 0.5038
+      },
+      "ds003838->STEW": {
+        "kind": "cross-device",
+        "f1_psd": 0.4792,
+        "acc_psd": 0.5339,
+        "f1_tangent": 0.3752
+      },
+      "STEW->ds003838": {
+        "kind": "cross-device",
+        "f1_psd": 0.4018,
+        "acc_psd": 0.4352,
+        "f1_tangent": 0.4268
+      },
+      "COG-BCI->STEW": {
+        "kind": "cross-device",
+        "f1_psd": 0.3925,
+        "acc_psd": 0.4885
+      }
+    },
+    "poolB": {
+      "COG-BCI+Hinss->ds003838": 0.4684,
+      "COG-BCI+Hinss+ds003838->STEW": 0.4112,
+      "COG-BCI+Hinss->STEW": 0.4204
+    }
+  },
+  "span_graded": {
+    "ds003838_within_f1": 0.2176,
+    "std": 0.0006,
+    "n_epoch": 59236,
+    "n_classes": 3
+  }
+}
